@@ -26,3 +26,9 @@
 
 - `docker exec -it some-container bash`  
   Executa o bash e habilita a escrita no terminal.
+
+- `docker run -d --name nginx -p 8080:80 -v /c/Users/rodri/Desktop/full-cycle/docker/html:/usr/share/nginx/html nginx`  
+  Faz bind do volume da máquina para o container.
+
+- `docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx`  
+  Faz bind do volume da máquina para o container.   
