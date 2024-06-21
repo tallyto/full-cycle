@@ -32,3 +32,24 @@
 
 - `docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx`  
   Faz bind do volume da máquina para o container.   
+
+- `docker volume`
+  Mostra os comandos de volume
+
+- `docker volume ls`
+  Lista os volumes
+
+- `docker volume create some-name`
+  Cria volume
+
+- `docker volume inspect some-name`
+  Mostra as configurações do volume
+
+- `docker run --name nginx -d --mount type=volume,source=some-volume,target=/app nginx`
+ Inicia um container com o volume criado
+
+- `docker run --name nginx -d -v some-volume:/app nginx`
+  Inicia um container com o volume criado
+
+- `docker volume prune`
+  Remove todos os volumes 
