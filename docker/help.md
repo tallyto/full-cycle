@@ -104,6 +104,9 @@
 - `docker image prune`  
   Remove imagens não utilizadas.
 
+- `docker rm $(docker ps -a -q) -f`
+  Remove todos os containers ativos e inativos
+
 ### Dicas e Truques
 
 - Utilize `docker logs container-id` para visualizar os logs de um container.
