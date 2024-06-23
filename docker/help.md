@@ -66,6 +66,9 @@
 - `docker build -t some-image .`  
   Constrói uma nova imagem a partir de um Dockerfile no diretório atual.
 
+- `docker rmi $(docker images -a -q)`
+  Remove todas as imagens
+
 #### Redes
 
 - `docker network ls`  
