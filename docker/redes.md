@@ -27,3 +27,38 @@ No Docker, as redes são essenciais para permitir que os containers se comunique
    - **Uso**: Utilizado para casos onde a rede não é necessária, ou você deseja configurar manualmente a rede do container.
    - **Comando**: `docker network create --driver none my-none-network`
 
+### Comandos Úteis
+
+- `docker network ls`: Lista todas as redes existentes no Docker.
+- `docker network create some-network`: Cria uma nova rede com o nome especificado.
+- `docker network inspect some-network`: Exibe os detalhes e configuração de uma rede específica.
+- `docker network rm some-network`: Remove a rede especificada.
+
+### Exemplos de Uso
+
+1. **Criar uma rede bridge:**
+   ```sh
+   docker network create --driver bridge my-bridge-network
+   ```
+
+2. **Criar uma rede overlay:**
+   ```sh
+   docker network create --driver overlay my-overlay-network
+   ```
+
+3. **Criar uma rede macvlan:**
+   ```sh
+   docker network create --driver macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eth0 my-macvlan-network
+   ```
+
+4. **Inspecionar uma rede:**
+   ```sh
+   docker network inspect my-bridge-network
+   ```
+
+5. **Remover uma rede:**
+   ```sh
+   docker network rm my-bridge-network
+   ```
+
+Esses tipos de redes permitem que você configure e gerencie a conectividade dos seus containers de acordo com as necessidades específicas da sua aplicação, seja ela simples ou distribuída.
