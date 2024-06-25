@@ -1,4 +1,18 @@
 const express = require('express')
+const mysql = require('mysql')
+
+const config =  {
+    host: 'db',
+    user: 'root',
+    password: 'root',
+    database: 'nodedb'
+}
+
+const connection = mysql.createConnection(config)
+
+const sql = `INSERT INTO people(name) values('Tállyto')`
+connection.query(sql)
+connection.end()
 
 const app = express()
 
