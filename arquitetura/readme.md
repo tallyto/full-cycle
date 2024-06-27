@@ -5,6 +5,20 @@
 - Tecnológica
 - Corporativa
 
+## Arquitetura de Software
+
+> É a relação entre os objetivos de negócio e suas restrições com os componentes a serem criados e suas responsabilidades visando sua evolução de software.
+
+- É uma "disciplina" da engenharia de software
+- Diretamente ligada ao processo de desenvolvimento de software
+- Afeta diretamente na estrutura organizacional da empresa
+  - Formação dos times
+  - Estrutura dos componentes de software
+  - "Organizações que desenvolvem sistemas de software tendem a produzir sistemas que são cópia das estruturas de comunicação dessas empresas. (Melvin Conway)"
+- O processo de arquitetar um software estabelece que o que está sendo desenvolvido faça parte de um conjunto maior.
+
+> "É a organização fundamental de um sistema e seus componentes, suas relações, seu ambiente, bem como os princípios que guiam seu design e evolução." (IEEE Standard 1471)
+
 ## Arquitetura de Soluções
 
 - Fica entre a área de negócios e software
