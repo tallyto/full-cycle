@@ -19,6 +19,18 @@
 
 > "É a organização fundamental de um sistema e seus componentes, suas relações, seu ambiente, bem como os princípios que guiam seu design e evolução." (IEEE Standard 1471)
 
+## Papel do Arquiteto(a) de Software
+
+- Transformar requisitos de negócio em padrões arquiteturais
+- Orquestrar pessoas desenvolvedoras e experts de domínio
+- Entender de forma profunda conceitos e modelos arquiteturais
+- Auxilia na tomada de decisão nos momentos de crise
+- Reforça boas prática de desenvolvimento
+- Code reviews
+
+> Apesar de nem todas as organizações possuírem o cargo de arquiteto de software, normalmente profissionais mais experientes como desenvolvedores seniors e tech leads acabam realizando esse papel baseado em suas experiencias anteriores.
+> Ha empresas que apesar de não possuírem o cargo de arquiteto(a) de software, possuem um departamento de arquitetura que auxilia os diversos times da organização com questões arquiteturais.
+
 ## Arquitetura de Soluções
 
 - Fica entre a área de negócios e software
