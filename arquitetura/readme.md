@@ -31,6 +31,15 @@
 > Apesar de nem todas as organizações possuírem o cargo de arquiteto de software, normalmente profissionais mais experientes como desenvolvedores seniors e tech leads acabam realizando esse papel baseado em suas experiencias anteriores.
 > Ha empresas que apesar de não possuírem o cargo de arquiteto(a) de software, possuem um departamento de arquitetura que auxilia os diversos times da organização com questões arquiteturais.
 
+## Por que aprender arquitetura de software?
+
+- Poder navegar da visão macro para a visão micro de um ou mais software
+- Entender quais são as diversas opções que temos para desenvolver a mesma coisa e escolher a melhor solução para determinado contexto
+- Pensar a longo prazo no projeto e sua sustentabilidade
+- Tomar decisões de forma mais fria e calculada evitando assim ser influenciado(a) por "hypes" de mercado
+- Mergulho em padrões de projeto e de desenvolvimento e suas boas práticas
+- Tomar decisões com mais confiança
+
 ## Arquitetura de Soluções
 
 - Fica entre a área de negócios e software
