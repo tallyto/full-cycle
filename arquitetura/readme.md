@@ -104,3 +104,9 @@ Design: Escopo local
 - Legal
 - Audit
 - Marketing
+
+## Características arquiteturais
+
+- Operacionais
+- Estruturais
+- Cross-Cutting
