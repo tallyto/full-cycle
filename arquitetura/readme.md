@@ -40,6 +40,11 @@
 - Mergulho em padrões de projeto e de desenvolvimento e suas boas práticas
 - Tomar decisões com mais confiança
 
+Arquitetura vs Design
+
+Arquitetura: Escopo global ou alto nível
+Design: Escopo local
+
 ## Arquitetura de Soluções
 
 - Fica entre a área de negócios e software
