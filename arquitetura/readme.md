@@ -85,4 +85,12 @@ Design: Escopo local
 - Software precisa se pagar ao longo do tempo
 - Acompanhar a evolução do negócio
 - Quanto mais tempo o software fica no ar, mais retorno gera
-- A solução precisa ser arquitetada 
+- A solução precisa ser arquitetada
+
+## Pilares da arquitetura de software
+
+- Estruturação
+  - Fácil evolução, componentização para atender os objetivos de negócio
+- Componentização
+- Relacionamento entre sistemas
+- Governança
