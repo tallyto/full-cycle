@@ -94,3 +94,13 @@ Design: Escopo local
 - Componentização
 - Relacionamento entre sistemas
 - Governança
+
+## Requisitos arquiteturais (RAs)
+
+- Performance
+- Armazenamento de dados
+- Escalabilidade
+- Segurança
+- Legal
+- Audit
+- Marketing
