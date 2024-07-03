@@ -40,7 +40,7 @@
 - Mergulho em padrões de projeto e de desenvolvimento e suas boas práticas
 - Tomar decisões com mais confiança
 
-Arquitetura vs Design
+## Arquitetura vs Design
 
 Arquitetura: Escopo global ou alto nível
 Design: Escopo local
@@ -77,3 +77,12 @@ Design: Escopo local
 - Planejamento de grandes implantações
   - Sistemas "core"
   - Migrações
+
+## Sustentabilidade
+
+- Desenvolver software é caro
+- Software resolve uma "dor"
+- Software precisa se pagar ao longo do tempo
+- Acompanhar a evolução do negócio
+- Quanto mais tempo o software fica no ar, mais retorno gera
+- A solução precisa ser arquitetada 
