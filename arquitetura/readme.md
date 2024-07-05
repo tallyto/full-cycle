@@ -110,3 +110,13 @@ Design: Escopo local
 - Operacionais
 - Estruturais
 - Cross-Cutting
+
+## Características arquiteturais: Operacionais
+
+- Disponibilidade
+- Recuperação de desastres
+- Performance
+- Recuperação (backup)
+- Confiabilidade e segurança
+- Robustez
+- Escalabilidade
