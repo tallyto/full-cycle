@@ -67,4 +67,12 @@
     - MySQL
     - Redis
     - Memcache
- 
+
+#### Caching: Edge computing
+
+- Cache realizado mais próximo ao usuário
+- Evita a requisição chegar até o Cloud Provider / Infra
+- Normalmente arquivos estáticos
+- CDN - Content Delivery Network
+- Cloudflare workers
+- Vercel
