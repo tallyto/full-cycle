@@ -120,3 +120,14 @@ Design: Escopo local
 - Confiabilidade e segurança
 - Robustez
 - Escalabilidade
+
+## Características arquiteturais: Estruturais
+
+- Configurável
+- Extensibilidade
+- Fácil instalação
+- Reuso de componentes
+- Internacionalização
+- Fácil manutenção
+- Portabilidade (diversos bancos de dados)
+- Fácil suporte (logs,debugging)
