@@ -131,3 +131,13 @@ Design: Escopo local
 - Fácil manutenção
 - Portabilidade (diversos bancos de dados)
 - Fácil suporte (logs,debugging)
+
+## Características arquiteturais: Cross-Cutting
+
+- Acessibilidade
+- Processo de retenção e recuperação de dados (quanto tempo os dados serão mantidos)
+- Autenticação e Autorização
+- Legal
+- Privacidade
+- Segurança
+- Usabilidade
