@@ -35,3 +35,36 @@
 - Concorrência e paralelismo
 - Banco de dados (tipos de bancos, schema)
 - Caching
+
+### Capacidade computacional: Escala vertical vs horizontal
+
+#### Diferença entre concorrência e paralelismo
+
+> "Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas ao mesmo tempo". Rob Pike
+
+### Caching
+
+- Cache na borda / Edge computing
+- Dados estáticos
+- Páginas web
+- Funções internas
+  - Evita reprocessamento de algoritmos pesados
+  - Acesso ao banco de dados
+- Objetos
+
+#### Caching: Exclusivo vs Compartilhado
+
+- Exclusivo
+  - Baixa latência
+  - Duplicado entre nós
+  - Problemas relacionados a sessões
+
+- Compartilhado
+  - Maior latência
+  - Não há duplicação
+  - Sessões compartilhadas
+  - Banco de dados externo
+    - MySQL
+    - Redis
+    - Memcache
+ 
