@@ -13,3 +13,11 @@
 * Um sistema não pode ser "egoísta" ao ponto de realizar mais requisições em um sistema que está falhando.
 
 * Um sistema lento no ar muitas vezes é pior do que um sistema fora do ar (Efeito dominó)
+
+## Health check
+
+* Sem sinais vitais, não é possível saber a "saúde" de um sistema
+
+* Um sistema que não está saudável possui uma change de se recuperar caso o tráfego para de ser direcionado a ele temporariamente
+
+* Health check de qualidade
