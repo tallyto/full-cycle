@@ -27,3 +27,13 @@
 * APM (Application performance monitoring) nas queries
 * Explain nas queries
 * CQRS (Command Query Responsibility Segregation)
+
+### Proxy reverso
+
+> Um proxy reverso é um servidor que fica na frente dos servidores web e encaminha as solicitações do cliente (por ex exemplo, navegador web) para esses servidores web.
+
+### Soluções populares de Proxy Reverso
+
+* Nginx
+* HAProxy (HA = High Availability)
+* Traefik
