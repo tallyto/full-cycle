@@ -21,3 +21,9 @@
 * Um sistema que não está saudável possui uma change de se recuperar caso o tráfego para de ser direcionado a ele temporariamente
 
 * Health check de qualidade
+
+## Rate Limiting
+
+* Protege o sistema baseado no que ele foi projetado para suportar
+
+* Preferência programada por tipo de cliente
