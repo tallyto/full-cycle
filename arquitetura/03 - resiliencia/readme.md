@@ -28,7 +28,7 @@
 
 * Preferência programada por tipo de cliente
 
-## Circuite breaker 
+## Circuite breaker
 
 * Protege o sistema fazendo com que as requisições feitas para ele sejam negadas. Ex: 500
 
@@ -37,3 +37,9 @@
 * Circuito aberto = Requisição não chegam ao sistema. Erro instantâneo ao client
 
 * Meio aberto = Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
+
+## API Gateway
+
+* Garante que requisições "inapropriadas" cheguem até o sistema: Ex: usuário autenticado
+
+* Implementa políticas de Rate Limiting, Health check, etc
