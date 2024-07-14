@@ -51,3 +51,13 @@
 * Evita implementações de proteção pelo próprio sistema.
 
 * mTLS
+
+## Trabalhar de forma assíncrona
+
+* Evita perda de dados
+
+* Não há perda de dados no envio de uma transação de o server estiver fora
+
+* Servidor pode processar o a transação em seu tempo quanto estiver online
+
+* Entender com profundidade o message broker / sistema de stream
