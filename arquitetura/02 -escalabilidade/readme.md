@@ -16,7 +16,7 @@
 
 ### Escala de banco de dados
 
-* Aumentando recursos computacionais 
+* Aumentando recursos computacionais
 * Distribuindo responsabilidades (escrita vs leitura)
 * Shards de forma horizontal
 * Serverless
