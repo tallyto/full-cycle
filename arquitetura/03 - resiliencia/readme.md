@@ -43,3 +43,11 @@
 * Garante que requisições "inapropriadas" cheguem até o sistema: Ex: usuário autenticado
 
 * Implementa políticas de Rate Limiting, Health check, etc
+
+## Service Mesh
+
+* Controla o tráfego de rede
+
+* Evita implementações de proteção pelo próprio sistema.
+
+* mTLS
