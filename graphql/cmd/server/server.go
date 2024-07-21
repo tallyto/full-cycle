@@ -8,6 +8,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/tallyto/full-cycle/graphql/graph"
 	"github.com/tallyto/full-cycle/graphql/internal/database"
@@ -17,7 +18,14 @@ const defaultPort = "8080"
 
 func main() {
 
-	db, err := sql.Open("sqlite3", "./data.db")
+	// db, err := sql.Open("sqlite3", "./data.db")
+
+	dsn := os.Getenv("DATABASE_URL")
+	if dsn == "" {
+		log.Fatalf("DATABASE_URL environment variable is required but not set")
+	}
+
+	db, err := sql.Open("postgres", dsn)
 
 	if err != nil {
 		log.Fatalf("failed to open database: %v", err)

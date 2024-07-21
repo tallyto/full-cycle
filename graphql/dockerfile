@@ -1,0 +1,29 @@
+# Usando a imagem oficial do Go como base
+FROM golang:1.22.5-alpine
+
+# Configurando o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copiando o go.mod e go.sum para o diretório de trabalho
+COPY go.mod go.sum ./
+
+# Baixando as dependências
+RUN go mod download
+
+# Copiando o código da aplicação para o diretório de trabalho
+COPY . .
+
+# Configurando o diretório de trabalho para o diretório do servidor
+WORKDIR /app/cmd/server
+
+# Construindo a aplicação
+RUN go build -o /app/main .
+
+# Configurando o diretório de trabalho de volta para a raiz da aplicação
+WORKDIR /app
+
+# Expondo a porta que a aplicação usará
+EXPOSE 8080
+
+# Comando para rodar a aplicação
+CMD ["./main"]
