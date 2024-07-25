@@ -15,7 +15,7 @@ import (
 
 func main() {
 
-	db, err := sql.Open("postgres", "postgres://gograph:gograph@db:5432/gograph?sslmode=disable")
+	db, err := sql.Open("postgres", "postgres://gograph:gograph@localhost:5432/gograph?sslmode=disable")
 
 	if err != nil {
 		log.Fatalf("failed to open database: %v", err)
@@ -30,7 +30,7 @@ func main() {
 	pb.RegisterCategoryServiceServer(grpcServer, categoryService)
 	reflection.Register(grpcServer)
 
-	lis, err := net.Listen("tpc", ":50051")
+	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		panic(err)
 	}
