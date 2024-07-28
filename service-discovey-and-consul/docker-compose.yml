@@ -1,18 +1,52 @@
-version: '3'
+version: '2'
 
 services:
   consulserver01:
-    image: consul:1.10
+    image: bitnami/consul
     container_name: consulserver01
-    hostname: consulserver01
-    command:  ['tail', '-f', '/dev/null']
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consulserver01
+    ports:
+      - '8300:8300'
+      - '8301:8301'
+      - '8301:8301/udp'
+      - '8500:8500'
+      - '8600:8600'
+      - '8600:8600/udp'
+    volumes:
+      - 'consulserver01_data:/bitnami'
+
   consulserver02:
-    image: consul:1.10
+    image: bitnami/consul
     container_name: consulserver02
-    hostname: consulserver02
-    command:  ['tail', '-f', '/dev/null']
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consulserver01
+      - CONSUL_ENABLE_UI=false
+    volumes:
+      - 'consulserver02_data:/bitnami'
+
   consulserver03:
-    image: consul:1.10
+    image: bitnami/consul
     container_name: consulserver03
-    hostname: consulserver03
-    command:  ['tail', '-f', '/dev/null']
+    environment:
+      - CONSUL_BOOTSTRAP_EXPECT=3
+      - CONSUL_CLIENT_LAN_ADDRESS=0.0.0.0
+      - CONSUL_DISABLE_KEYRING_FILE=true
+      - CONSUL_RETRY_JOIN_ADDRESS=consulserver01
+      - CONSUL_ENABLE_UI=false
+    volumes:
+      - 'consulserver03_data:/bitnami'
+
+volumes:
+  consulserver01_data:
+    driver: local
+  consulserver02_data:
+    driver: local
+  consulserver03_data:
+    driver: local
