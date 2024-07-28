@@ -7,6 +7,9 @@ consul agent -dev
 # Motra os consul members
 consul members
 
+# Carrega as alterações da config
+consul reload
+
 # Mostrar os nodes
 curl localhost:8500/v1/catalog/nodes
 
@@ -24,3 +27,7 @@ mkdir /etc/consul.d
 mkdir /var/lib/consul
 
 consul catalog nodes -service nginx
+
+dig @localhost -p 8600 nginx.service.consul
+
+https://wiki.alpinelinux.org/wiki/Nginx
