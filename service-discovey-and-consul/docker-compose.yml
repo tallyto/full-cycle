@@ -10,6 +10,15 @@ services:
     volumes: 
       - ./clients/consul-agent-1:/etc/consul.d
 
+  consul-agent-2:
+    container_name: consul-agent-2
+    image: consul:1.15
+    networks:
+      - consul-demo
+    command: "agent -retry-join consul-server-bootstrap -node=consul-agent-2 -config-dir=/etc/consul.d -client 0.0.0.0"
+    volumes: 
+      - ./clients/consul-agent-2:/etc/consul.d
+      
   consul-server-1:
     container_name: consul-server-1
     image: consul:1.15
