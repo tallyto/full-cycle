@@ -2,43 +2,30 @@ version: '3'
 
 services:
   consul-agent-1:
+    container_name: consul-agent-1
     image: consul:1.15
     networks:
       - consul-demo
-    command: "agent -retry-join consul-server-bootstrap -client 0.0.0.0"
-
-  consul-agent-2:
-    # Complete copy of 'consul-agent-1'
-    image: consul:1.15
-    networks:
-      - consul-demo
-    command: "agent -retry-join consul-server-bootstrap -client 0.0.0.0"
-
-  consul-agent-3:
-    # Complete copy of 'consul-agent-1'
-    image: consul:1.15
-    networks:
-      - consul-demo
-    command: "agent -retry-join consul-server-bootstrap -client 0.0.0.0"
+    command: "agent -retry-join consul-server-bootstrap -node=consul-agent-1 -config-dir=/etc/consul.d -client 0.0.0.0"
+    volumes: 
+      - ./clients/consul-agent-1:/etc/consul.d
 
   consul-server-1:
-    # Uses only image and networks from 'consul-agent-1'
-    # while 'command' is overwritten
+    container_name: consul-server-1
     image: consul:1.15
     networks:
       - consul-demo
-    command: "agent -server -retry-join consul-server-bootstrap -client 0.0.0.0"
+    command: "agent -server -retry-join consul-server-bootstrap -node=consul-server-1 -client 0.0.0.0"
 
   consul-server-2:
-    # Complete copy of 'consul-server-1'
+    container_name: consul-server-2
     image: consul:1.15
     networks:
       - consul-demo
-    command: "agent -server -retry-join consul-server-bootstrap -client 0.0.0.0"
+    command: "agent -server -retry-join consul-server-bootstrap -node=consul-server-2 -client 0.0.0.0"
 
   consul-server-bootstrap:
-    # Uses only image and networks from 'consul-agent-1'
-    # while 'command' is overwritten and 'ports' are defined
+    container_name: consul-server-bootstrap
     image: consul:1.15
     networks:
       - consul-demo
@@ -47,7 +34,7 @@ services:
       - "8500:8500"
       - "8600:8600"
       - "8600:8600/udp"
-    command: "agent -server -bootstrap-expect 3 -ui -client 0.0.0.0"
+    command: "agent -server -bootstrap-expect 3 -node=consul-server-bootstrap -ui -client 0.0.0.0"
 
 networks:
   consul-demo:
