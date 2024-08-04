@@ -1,0 +1,19 @@
+{
+  "name": "domain-driven-design",
+  "version": "1.0.0",
+  "description": "> \"Uma entidade é algo único que é capaz ser alterado de forma contínua durante um longa perído de tempo.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0"
+  }
+}
