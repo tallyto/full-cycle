@@ -12,6 +12,10 @@ export default class Customer {
         this.validate()
     }
 
+    changeName(name: string){
+        this.name = name
+    }
+
     setAddress(address: Address) {
         this.address = address
     }
@@ -31,10 +35,6 @@ export default class Customer {
             
         }
         this.active = true;
-    }
-
-    changeName(name: string){
-        this.name = name
     }
 
     deactivate() {

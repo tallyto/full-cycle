@@ -4,15 +4,21 @@
   "description": "> \"Uma entidade é algo único que é capaz ser alterado de forma contínua durante um longa perído de tempo.\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "^1.7.10",
+    "@swc/jest": "^0.2.36",
     "@types/eslint__js": "^8.42.3",
+    "@types/jest": "^29.5.12",
     "eslint": "^9.8.0",
+    "jest": "^29.7.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.0"
   }
