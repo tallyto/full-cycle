@@ -9,14 +9,12 @@ describe("Order service unit test", ()=> {
         const item2 = new OrderItem("orderItem2", "orderItem2", 20, "product2", 2)
 
         const order = new Order("order1", "customer1", [item1])
+        
         const order2 = new Order("order1", "customer1", [item2])
         
-        
-        const total = OrderService.totalOfOrders([order, order2])
-
-
-        
+        const total = OrderService.total([order, order2])
 
         expect(total).toBe(50)
+
     })
 })
