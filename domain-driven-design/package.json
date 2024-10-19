@@ -4,7 +4,8 @@
   "description": "> \"Uma entidade é algo único que é capaz ser alterado de forma contínua durante um longa perído de tempo.\"",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "npm run tsc -- --noEmit && jest",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
