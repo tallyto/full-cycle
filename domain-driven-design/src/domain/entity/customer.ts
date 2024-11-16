@@ -26,11 +26,15 @@ export default class Customer {
         return this._rewardPoints
     } 
 
+    get address(): Address {
+        return this._address
+    }
+
     changeName(name: string){
         this._name = name
     }
 
-    setAddress(address: Address) {
+    changeAddress(address: Address) {
         this._address = address
     }
 

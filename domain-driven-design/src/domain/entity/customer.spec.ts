@@ -30,7 +30,7 @@ describe("Customer unit tests", ()=> {
         const customer = new Customer("1", "John")
         const address = new Address("Rua dos bobos", 0, "12345678", "São Paulo")
 
-        customer.setAddress(address)
+        customer.changeAddress(address)
         customer.activate()
 
         expect(customer.isActive()).toBe(true)
