@@ -1,17 +1,18 @@
 import { Sequelize } from "sequelize-typescript";
+import Address from "../../domain/entity/address";
+import Customer from "../../domain/entity/customer";
+import Order from "../../domain/entity/order";
+import OrderItem from "../../domain/entity/order_item";
+import Product from "../../domain/entity/product";
 import CustomerModel from "../db/sequelize/model/customer.model";
-import OrderModel from "../db/sequelize/model/order.model";
 import OrderItemModel from "../db/sequelize/model/order-item.model";
+import OrderModel from "../db/sequelize/model/order.model";
 import ProductModel from "../db/sequelize/model/product.model";
 import CustomerRepository from "./customer.respository";
-import Customer from "../../domain/entity/customer";
-import Address from "../../domain/entity/address";
+import OrderRepository from "./order.respository";
 import ProductRepository from "./product.repository";
-import Product from "../../domain/entity/product";
-import OrderItem from "../../domain/entity/order_item";
-import Order from "../../domain/entity/order";
 
-describe("Customer repository test", ()=> {
+describe("Customer repository test", () => {
     let sequelize: Sequelize;
 
     beforeEach(async () => {
@@ -19,7 +20,7 @@ describe("Customer repository test", ()=> {
             dialect: "sqlite",
             storage: ":memory:",
             logging: false,
-            sync: {force: true}
+            sync: { force: true }
         })
 
         sequelize.addModels([OrderModel, CustomerModel, OrderItemModel, ProductModel])
@@ -32,7 +33,7 @@ describe("Customer repository test", ()=> {
     })
 
     it("should create a new order", async () => {
-        
+
         const customerRepository = new CustomerRepository()
         const customer = new Customer("1", "Customer 1")
         const address = new Address("Street 1", 1, "Zipcode 1", "City 1")
@@ -51,7 +52,7 @@ describe("Customer repository test", ()=> {
         await orderRepository.create(order)
 
         const orderModel = await OrderModel.findOne({
-            where: {id: order.id},
+            where: { id: order.id },
             include: ["items"]
         })
 
@@ -73,5 +74,5 @@ describe("Customer repository test", ()=> {
 
     })
 
-    
+
 })
