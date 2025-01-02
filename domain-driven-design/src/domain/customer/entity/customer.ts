@@ -1,6 +1,6 @@
 import Address from "../value-object/address";
 
-export default class Customer {
+export default class Customer implements Customer {
     private _id: string;
     private _name: string;
     private _address!: Address;
@@ -24,13 +24,13 @@ export default class Customer {
 
     get rewardPoints(): number {
         return this._rewardPoints
-    } 
+    }
 
     get address(): Address {
         return this._address
     }
 
-    changeName(name: string){
+    changeName(name: string) {
         this._name = name
     }
 
@@ -52,9 +52,9 @@ export default class Customer {
     }
 
     activate() {
-        if(this._address === undefined) {
+        if (this._address === undefined) {
             throw new Error("Address is mandatory to activate a customer");
-            
+
         }
         this._active = true;
     }
