@@ -38,7 +38,7 @@ func TestProduct_Disable(t *testing.T) {
 
 func TestProduct_IsValid(t *testing.T) {
 	product := application.Product{}
-	product.ID = uuid.New().String()
+	product.ID = uuid.NewString()
 	product.Name = "Hello"
 	product.Status = application.DISABLED
 	product.Price = 10
