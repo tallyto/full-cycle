@@ -1,5 +1,7 @@
 package application
 
+import "errors"
+
 type ProductInterface interface {
 	IsValid() (bool, error)
 	Enable() error
@@ -21,17 +23,22 @@ type Product struct {
 	Status string
 }
 
-func (p *Product) IsValid() (bool, error) {
+// func (p *Product) IsValid() (bool, error) {
 
-}
+// }
 
 func (p *Product) Enable() error {
+	if p.Price > 0 {
+		p.Status = ENABLED
+		return nil
+	}
+	return errors.New("the price must be greater than zero to enable the product")
 
 }
 
-func (p *Product) Disable() error {
+// func (p *Product) Disable() error {
 
-}
+// }
 
 func (p *Product) GetID() string {
 	return p.ID
