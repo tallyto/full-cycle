@@ -18,6 +18,7 @@ type ProductInterface interface {
 	GetID() string
 	GetStatus() string
 	GetPrice() float64
+	GetName() string
 }
 
 type ProductServiceInterface interface {
