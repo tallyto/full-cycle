@@ -11,6 +11,16 @@ type ProductDb struct {
 	db *sql.DB
 }
 
+// GetAll implements application.ProductPersistenceInterface.
+func (p *ProductDb) GetAll() ([]application.ProductInterface, error) {
+	panic("unimplemented")
+}
+
+// Update implements application.ProductPersistenceInterface.
+func (p *ProductDb) Update(product application.ProductInterface) error {
+	panic("unimplemented")
+}
+
 func NewProductDb(db *sql.DB) *ProductDb {
 	return &ProductDb{db: db}
 }
