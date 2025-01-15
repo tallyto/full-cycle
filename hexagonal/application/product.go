@@ -26,17 +26,14 @@ type ProductServiceInterface interface {
 	Enable(product ProductInterface) (ProductInterface, error)
 	Disable(product ProductInterface) (ProductInterface, error)
 	Get(id string) (ProductInterface, error)
-	GetAll() ([]ProductInterface, error)
 }
 
 type ProductReader interface {
 	Get(id string) (ProductInterface, error)
-	GetAll() ([]ProductInterface, error)
 }
 
 type ProductWriter interface {
 	Save(product ProductInterface) (ProductInterface, error)
-	Update(product ProductInterface) error
 }
 
 type ProductPersistenceInterface interface {
