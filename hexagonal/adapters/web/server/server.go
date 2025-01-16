@@ -33,7 +33,7 @@ func (w *WebServer) Serve() {
 	server := &http.Server{
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
-		Addr:         ":9000",
+		Addr:         ":3000",
 		Handler:      http.DefaultServeMux,
 		ErrorLog:     log.New(os.Stderr, "log: ", log.Ldate|log.Ltime|log.Lshortfile),
 	}

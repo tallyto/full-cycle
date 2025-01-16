@@ -9,11 +9,10 @@ import (
 	"github.com/urfave/negroni"
 )
 
-func MakeProductHandlers(r *mux.Router, negroni *negroni.Negroni, service application.ProductServiceInterface) {
-	r.Handle("/product/{id}", negroni.With(
+func MakeProductHandlers(r *mux.Router, n *negroni.Negroni, service application.ProductServiceInterface) {
+	r.Handle("/product/{id}", n.With(
 		negroni.Wrap(getProduct(service)),
 	)).Methods("GET", "OPTIONS")
-
 }
 
 func getProduct(service application.ProductServiceInterface) http.Handler {
