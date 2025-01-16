@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/tallyto/full-cycle/hexagonal/adapters/web/handler"
 	"github.com/tallyto/full-cycle/hexagonal/application"
 	"github.com/urfave/negroni"
 )
@@ -19,11 +20,16 @@ func NewWebServer() *WebServer {
 	return &WebServer{}
 }
 
-func (s *WebServer) Serve() {
+func (w *WebServer) Serve() {
 	r := mux.NewRouter()
 	n := negroni.New(
 		negroni.NewLogger(),
 	)
+
+	handler.MakeProductHandlers(r, n, w.Service)
+
+	http.Handle("/", r)
+
 	server := &http.Server{
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
