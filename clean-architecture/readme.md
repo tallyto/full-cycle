@@ -61,3 +61,10 @@ SRP (Single Responsibility Principle) => Mudam por razões diferentes
 ## Limites arquiteturais
 
 - Tudo que não impacta diretamente nas regras de negócio deve estar em um lime arquitetural diferente. Ex: Não será o frontend, banco de dados que mudarão as regras de negócio da aplicação.
+
+## Input vs Output
+
+- No final do dia, tudo se resume a um Input que retorna um Output
+  > Ex: Criar um pedido (dados do pedido = input)
+  > Pedido criado (dados de retorno do pedido)
+- Simplifique seu raciocínio ao criar um software sempre pensando em Input e Output
