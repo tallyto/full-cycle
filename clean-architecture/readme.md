@@ -44,3 +44,16 @@
 - Detalhes ajudam a suportar as regras
 - Detalhes não devem impactar nas regras de negócio
 - Frameworks, banco de dados, apis, não devem impactar as regras
+
+## Use Cases
+
+- Intenção
+- Clareza de cada comportamento do software
+- Detalhes não devem impactar nas regras de negócio
+
+### Use Cases - Single Responsibility Principle
+
+- Temos a tendência de "reaproveitar" uses cases por serem muito parecidos.
+  > Ex: Alterar vs Inserir. Ambos consultam se o registro existe, persistem dados. MAS, não Use Cases diferentes. Por que?
+
+SRP (Single Responsibility Principle) => Mudam por razões diferentes
