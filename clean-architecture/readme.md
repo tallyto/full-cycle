@@ -77,3 +77,9 @@ SRP (Single Responsibility Principle) => Mudam por razões diferentes
 - Não possui regras de negócio
 - Não possui comportamento
 - Não faz nada!
+
+## Presenters
+
+- Objetos de transformação
+- Adéqua o DTO de output no formato correto para entregar o resultado
+- Lembrando: Um sistema por ter diversos formatos de entrega: ex: XML, JSON, Protobuf, GraphQL, CLI, etc.
