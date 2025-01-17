@@ -68,3 +68,12 @@ SRP (Single Responsibility Principle) => Mudam por razões diferentes
   > Ex: Criar um pedido (dados do pedido = input)
   > Pedido criado (dados de retorno do pedido)
 - Simplifique seu raciocínio ao criar um software sempre pensando em Input e Output
+
+## DTO (Data Transfer Object)
+
+- Trafegar dados entre os limites arquiteturais
+- Objeto anêmico, sem comportamento
+- Contém dados (Input ou Output)
+- Não possui regras de negócio
+- Não possui comportamento
+- Não faz nada!
