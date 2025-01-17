@@ -24,3 +24,23 @@
 - Limites arquiteturais
 
 - Percepção sobre regas de negócios
+
+## Pontos importantes
+
+- Formato que o software terá
+- Divisão de componentes
+- Comunicação entre componentes
+- Uma boa arquitetura vai facilitar o processo de desenvolvimento, deploy, operação e manutenção
+
+## Objetivos
+
+- O objetivo principal da arquitetura é dar suporte ao ciclo de vida do sistema. Uma boa arquitetura torna o sistema fácil de entender, fácil de desenvolver, fácil de manter e fácil de implantar. O objetivo final é minimizar o custo de vida útil do sistema e maximizar a produtividade do programador.
+
+> "C., Martin Robert. Clean Architecture (Robert C. Martin Series)(p.137). Pearson Education. Kindle Edition"
+
+## Regras vs Detalhes
+
+- Regas de negócio trazem o real valor para o software
+- Detalhes ajudam a suportar as regras
+- Detalhes não devem impactar nas regras de negócio
+- Frameworks, banco de dados, apis, não devem impactar as regras
