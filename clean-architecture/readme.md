@@ -83,3 +83,12 @@ SRP (Single Responsibility Principle) => Mudam por razões diferentes
 - Objetos de transformação
 - Adéqua o DTO de output no formato correto para entregar o resultado
 - Lembrando: Um sistema por ter diversos formatos de entrega: ex: XML, JSON, Protobuf, GraphQL, CLI, etc.
+
+## Entities
+
+- Entities da Clean Architecture <> Entities do DDD
+- Clean Architecture define entity como camada das regas de negócio
+- Elas se aplicam em qualquer situação
+- Não há definição explicita de como criar as entities
+- Normalmente utilizamos táticas do DDD
+- Entities = Agregados + Domain Services
